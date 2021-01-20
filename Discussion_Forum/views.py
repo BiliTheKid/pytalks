@@ -57,29 +57,6 @@ def index(request):
     """View function for home page of site."""
 
     # Generate counts of some of the main objects
-    num_Category = Category.objects.all().count()
-
+    
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html')
-
-def User_posts(request):
-    latest_posts = Post.objects.all()
-    return render(request,'User_posts')
-
-
-
-class ThreadForumList(generic.ListView):
-    model = ThreadForum
-    context_object_name = 'my_threads_list'  # your own name for the list as a template variable
-    queryset = ThreadForum.Thread_forum_id
-    template_name = 'threads_in_forum/list_of_threads.html'  # Specify your own template name/location
-
-    class Meta:
-        ordering = ['ThreadForum']
-
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get the context
-        context = super(ThreadForumList, self).get_context_data(**kwargs)
-        # Create any data and add it to the context
-        context['some_data'] = 'This is just some data'
-        return context

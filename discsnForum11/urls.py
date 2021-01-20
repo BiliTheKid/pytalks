@@ -25,6 +25,6 @@ urlpatterns = [
     path('addInForum/', addInForum, name='addInForum'),
     path('addInDiscussion/', addInDiscussion, name='addInDiscussion'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('User_posts/', User_posts, name='User_posts'),
+   
 
 ]
