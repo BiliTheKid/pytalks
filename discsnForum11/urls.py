@@ -19,9 +19,9 @@ from Discussion_Forum.views import *
 from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index, name='index'),
-    path('', home, name='home'),
-    path('Category/ThreadForum/',ThreadForumList.as_view(), name='list_of_threads'),
+    path('', index, name='index'),
+    #path('', home, name='home'),
+    path('Category/ThreadForum/',home,name='home'),
     path('addInForum/', addInForum, name='addInForum'),
     path('addInDiscussion/', addInDiscussion, name='addInDiscussion'),
     path('accounts/', include('django.contrib.auth.urls')),
