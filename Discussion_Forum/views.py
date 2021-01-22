@@ -32,6 +32,7 @@ def home(request):
 
 
 def addInForum(request):
+    form_class = CreateInForum
     form = CreateInForum()
     if request.method == 'POST':
         form = CreateInForum(request.POST)
@@ -60,3 +61,13 @@ def index(request):
     
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html')
+
+
+def New_Discussion(request):
+    """View function for home page of site."""
+
+    # Generate counts of some of the main objects
+
+    # Render the HTML template index.html with the data in the context variable
+    return render(request, 'New_Discussion.html')
+

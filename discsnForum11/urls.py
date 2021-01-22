@@ -22,6 +22,7 @@ urlpatterns = [
     path('', index, name='index'),
     #path('', home, name='home'),
     path('Category/ThreadForum/',home,name='home'),
+    path('New_Discussion/', New_Discussion, name='New_Discussion'),
     path('addInForum/', addInForum, name='addInForum'),
     path('addInDiscussion/', addInDiscussion, name='addInDiscussion'),
     path('accounts/', include('django.contrib.auth.urls')),

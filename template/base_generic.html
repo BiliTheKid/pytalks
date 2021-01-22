@@ -18,10 +18,18 @@
       {% block sidebar %}
         <ul class="sidebar">
             <h2>pytalks</h2>
+             <form method="POST" action="{% url 'addInForum' %}">
+                {% csrf_token %}
+            <button class="btn btn-success" >Add more</button>
+            </form>
+
+
           <a href="{% url 'index' %}" >Home</a>
           <a href="{% url 'home' %}">All thread</a>
           <a href="">All Category</a>
+<!--          <a href="{% url 'New_Discussion' %}">Start a Discussion </a>-->
         </ul>
+
      {% endblock %}
       </div>
       <div class="reg_style ">{% block content %}
@@ -34,5 +42,6 @@
           {% endblock %}</div>
     </div>
   </div>
+
 </body>
 </html>

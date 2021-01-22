@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Discussion_Forum.apps.DiscussionForumConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
